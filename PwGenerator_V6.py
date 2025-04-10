@@ -24,7 +24,7 @@ class GeneratedPassword:
             givenLen.delete(0, tk.END)
             givenPhrase.delete(0, tk.END)
             givenChar.delete(0, tk.END)
-            displayedMessage.config(text="Length must be an integer")
+            displayedMessage.config(text="Invalid length")
             return False
         
         # If the combined length of the phrase and character exceeds the desired length,

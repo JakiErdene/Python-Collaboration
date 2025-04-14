@@ -202,6 +202,7 @@ def reset_all():
     adjustButton.config(state=tk.DISABLED)
     saveButton.config(state=tk.DISABLED)
     ageLabel.config(text="", bg=current_bg_color, fg="black")
+    strengthSuggestion.config(text="")
     adjustFrame.grid_remove()
     use_phrases.set(True)
     use_characters.set(True)

@@ -77,16 +77,19 @@ class GeneratedPassword:
         # Checks if the entered length is more than 25 (not allowed)
         if self.length == 0 or self.length > 25:
             displayedMessage.config(text="Invalid password length")
+            strengthSuggestion.config(text="")
             return False
         
         # Checks if the combined length of the specified phrases and characters are more than the specified length.
         if sum(len(p) for p in self.phrases) + sum(len(c) for c in self.characters) > self.length:
             displayedMessage.config(text="Phrases and characters too long")
+            strengthSuggestion.config(text="")
             return False
         
         # Checks if the user enters more than one character (without separating them with a comma)
         if any(len(c) != 1 for c in self.characters):
             displayedMessage.config(text="Each character must be one character long")
+            strengthSuggestion.config(text="")
             return False
         return True
 
